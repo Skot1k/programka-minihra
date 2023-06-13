@@ -26,7 +26,7 @@ public class charmovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime ;
         
-        if (Input.GetKeyDown(KeyCode.Space) && alive && rb.velocity.y <= 0)
+        if (Input.GetKeyDown(KeyCode.Space) && alive && rb.velocity.y <= 0 && rb.velocity.y >= -1.5)
         {
             rb.velocity += Vector2.up * jumpStrength;
         }
